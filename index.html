@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/github-icon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="content grid">
+      <header class="header flex">
+        <h1 class="title">Rock Paper Scissors</h1>
+
+        <section class="scoreboard flex">
+          <h3>You</h3>
+          <span class="score grid">0</span>
+
+          <h3>Computer</h3>
+          <span class="score grid">0</span>
+        </section>
+      </header>
+
+      <main class="options flex">
+        <div class="option grid">
+          <img src="./src/assets/hand_rock.png" alt="Hand">
+        </div>
+
+        <div class="option grid">
+          <img src="./src/assets/hand_paper.png" alt="Hand">
+        </div>
+        
+        <div class="option grid">
+          <img src="./src/assets/hand_scissors.png" alt="Hand">
+        </div>
+      </main>
+
+      <footer class="footer">
+        <a class="link flex" href="https://github.com/wesleydamasceno" target="_blank">
+          <img src="./src/assets/github-icon.svg" alt="GitHub Octocat">
+          @wesleydamasceno
+        </a>
+      </footer>
+    </div>
+    <script type="module" src="./src/js/index.js"></script>
+  </body>
+</html>
