@@ -1,0 +1,29 @@
+.option:hover {
+  transform: translateY(-2rem);
+}
+
+.option:nth-of-type(1) {
+  animation: upper 1s alternate;
+}
+.option:nth-of-type(2) {
+  animation: upper 1s alternate 350ms;
+}
+.option:nth-of-type(3) {
+  animation: upper 1s alternate 450ms;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@keyframes upper {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

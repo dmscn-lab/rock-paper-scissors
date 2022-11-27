@@ -1,0 +1,38 @@
+@import './base.css';
+@import './game.css';
+@import './animation.css';
+
+@media (max-width: 700px) {
+  .content {
+    row-gap: 7.5rem;
+  }
+
+  .header {
+    gap: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .scoreboard > * {
+    font-size: 1rem;
+  }
+
+  .options {
+    column-gap: 1rem;
+  }
+  .option {
+    width: 5rem;
+    height: 5rem;
+  }
+  .option > * {
+    width: 3.125rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .content {
+    row-gap: 7.5rem;
+  }
+}

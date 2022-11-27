@@ -1,0 +1,34 @@
+:root {
+  --purple: #221D5A;
+  --light-purple: #5A53AF;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  color: var(--white);
+  font-family: 'Ubuntu', monospace;
+
+  background-color: var(--purple);
+}
+
+a {
+  color: var(--light-purple);
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
