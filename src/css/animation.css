@@ -12,16 +12,37 @@
   animation: upper 1s alternate 450ms;
 }
 
-.link:hover {
-  text-decoration: underline;
-}
-
 @keyframes upper {
   0% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.status::backdrop {
+  animation: dissolve 450ms forwards;
+}
+.status {
+  animation: slideIn 450ms forwards;
+}
+
+@keyframes dissolve {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100vh);
   }
   100% {
     transform: translateY(0);
