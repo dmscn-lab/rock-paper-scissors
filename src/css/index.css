@@ -1,5 +1,6 @@
 @import './base.css';
 @import './game.css';
+@import './modal.css';
 @import './animation.css';
 
 @media (max-width: 700px) {
