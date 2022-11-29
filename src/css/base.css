@@ -1,6 +1,8 @@
 :root {
   --purple: #221D5A;
   --light-purple: #5A53AF;
+  --green: #A1E0A7;
+  --red: #FF8E8E;
   --white: #FFFFFF;
 }
 
@@ -26,9 +28,16 @@ a {
   text-decoration: none;
 }
 
+button {
+  font-family: 'Ubuntu', monospace;
+}
+
 .grid {
   display: grid;
 }
 .flex {
   display: flex;
+}
+.link:hover {
+  text-decoration: underline;
 }
