@@ -25,18 +25,24 @@
 }
 
 .status::backdrop {
-  animation: dissolve 450ms forwards;
+  animation: dissolve 3s ease-in-out;
 }
 .status {
-  animation: slideIn 450ms forwards;
+  animation: slideIn 3s ease-in-out;
 }
 
 @keyframes dissolve {
   0% {
     opacity: 0;
   }
-  100% {
+  20% {
     opacity: .2;
+  }
+  40% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -44,7 +50,13 @@
   0% {
     transform: translateY(100vh);
   }
-  100% {
+  20% {
     transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
   }
 }
