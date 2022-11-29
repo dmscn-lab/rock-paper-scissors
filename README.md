@@ -1,7 +1,7 @@
 # Rock Paper Scissors 🎲
 
-This project is part of one of the challenges of the [Fullstack JavaScript](https://www.theodinproject.com/paths/full-stack-javascript) track by [The Odin Project](https://www.theodinproject.com/). <br>
-Objective is to create an application that saves read and unread books.
+This project is part of one of the challenges of the [Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations) track by [The Odin Project](https://www.theodinproject.com/). <br>
+Goal is to create a rock paper scissors game.
 
 <p align="center">
   <img width="60%" src="./src/assets/layout.png">
