@@ -1,0 +1,27 @@
+.status {
+  margin: auto auto;
+  border-radius: .5rem;
+  border: 0;
+
+  overflow: hidden;
+}
+.status::backdrop {
+  background: black;
+  opacity: .2;
+}
+.status > div button {
+  padding: 1rem;
+
+  color: var(--purple);
+  font-size: 1rem;
+
+  border: 0;
+  outline: 0;
+}
+
+.status.won > div button {
+  background-color: var(--green);  
+}
+.status.lose > div button {
+  background-color: var(--red);
+}
