@@ -23,51 +23,36 @@ function game(userChoice) {
     showStatus();
   }
 
-  if (userChoice === "rock" && cases[computer] === "paper") {
+  else if (userChoice === "rock" && cases[computer] === "paper") {
     status.updateStatus('lose', 'won');
-    response.innerText = 'You lose! Computer chose paper.';
+    response.innerText = `You lose! Computer chose ${cases[computer]}.`;
 
     showStatus();
     updateScore(1);
   }
 
-  if (userChoice === "rock" && cases[computer] === "scissors") {
+  else if (userChoice === "paper" && cases[computer] === "scissors") {
+    status.updateStatus('lose', 'won');
+    response.innerText = `You lose! Computer chose ${cases[computer]}.`;
+
+    showStatus();
+    updateScore(1);
+  }
+
+  else if (userChoice === "scissors" && cases[computer] === "rock") {
+    status.updateStatus('lose', 'won');
+    response.innerText = `You lose! Computer chose ${cases[computer]}.`;
+
+    showStatus();
+    updateScore(1);
+  }
+
+  else {
     status.updateStatus('won', 'lose');
-    response.innerText = 'You won! Computer chose scissors.';
+    response.innerText = `You won! Computer chose ${cases[computer]}.`;
 
     showStatus();
     updateScore(0);
-  }
-
-  if (userChoice === "paper" && cases[computer] === "rock") {
-    status.updateStatus('won', 'lose');
-    response.innerText = 'You won! Computer chose rock.';
-
-    showStatus();
-    updateScore(0);
-  }
-  if (userChoice === "paper" && cases[computer] === "scissors") {
-    status.updateStatus('lose', 'won');
-    response.innerText = 'You lose! Computer chose scissors.';
-
-    showStatus();
-    updateScore(1);
-  }
-
-  if (userChoice === "scissors" && cases[computer] === "rock") {
-    status.updateStatus('lose', 'won');
-    response.innerText = 'You lose! Computer chose rock.';
-
-    showStatus();
-    updateScore(1);
-  }
-
-  if (userChoice === "scissors" && cases[computer] === "paper") {
-    status.updateStatus('won', 'lose');
-    response.innerText = 'You won! Computer chose paper.';
-
-    showStatus();
-    updateScore(1);
   }
 }
 
