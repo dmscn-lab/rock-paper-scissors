@@ -8,80 +8,66 @@ const score = document.querySelectorAll('.score');
 const scoreboard = [0, 0];
 const cases = ["rock", "paper", "scissors"];
 
+function updateScore(index) {
+  scoreboard[index]++;
+  score[index].innerText = scoreboard[index];
+}
+
 function game(userChoice) {
   const computer = Math.floor(Math.random() * 3);
 
   if (userChoice === cases[computer]) {
-    status.classList.remove('lose');
-    status.classList.remove('won');
-
+    status.updateStatus('won', 'lose', true);
     response.innerText = 'Draw!';
+
     showStatus();
   }
 
   if (userChoice === "rock" && cases[computer] === "paper") {
-    status.classList.add('lose');
-    status.classList.remove('won');
-
+    status.updateStatus('lose', 'won');
     response.innerText = 'You lose! Computer chose paper.';
-    showStatus();
 
-    scoreboard[1]++;
-    score[1].innerText = scoreboard[1];
+    showStatus();
+    updateScore(1);
   }
 
   if (userChoice === "rock" && cases[computer] === "scissors") {
-    status.classList.add('won');
-    status.classList.remove('lose');
-
+    status.updateStatus('won', 'lose');
     response.innerText = 'You won! Computer chose scissors.';
-    showStatus();
 
-    scoreboard[0]++;
-    score[0].innerText = scoreboard[0];
+    showStatus();
+    updateScore(0);
   }
 
   if (userChoice === "paper" && cases[computer] === "rock") {
-    status.classList.add('won');
-    status.classList.remove('lose');
-
+    status.updateStatus('won', 'lose');
     response.innerText = 'You won! Computer chose rock.';
-    showStatus();
 
-    scoreboard[0]++;
-    score[0].innerText = scoreboard[0];
+    showStatus();
+    updateScore(0);
   }
   if (userChoice === "paper" && cases[computer] === "scissors") {
-    status.classList.add('lose');
-    status.classList.remove('won');
-
+    status.updateStatus('lose', 'won');
     response.innerText = 'You lose! Computer chose scissors.';
-    showStatus();
 
-    scoreboard[1]++;
-    score[1].innerText = scoreboard[1];
+    showStatus();
+    updateScore(1);
   }
 
   if (userChoice === "scissors" && cases[computer] === "rock") {
-    status.classList.add('lose');
-    status.classList.remove('won');
-
+    status.updateStatus('lose', 'won');
     response.innerText = 'You lose! Computer chose rock.';
-    showStatus();
 
-    scoreboard[1]++;
-    score[1].innerText = scoreboard[1];
+    showStatus();
+    updateScore(1);
   }
 
   if (userChoice === "scissors" && cases[computer] === "paper") {
-    status.classList.add('won');
-    status.classList.remove('lose');
-
+    status.updateStatus('won', 'lose');
     response.innerText = 'You won! Computer chose paper.';
-    showStatus();
 
-    scoreboard[0]++;
-    score[0].innerText = scoreboard[0];
+    showStatus();
+    updateScore(1);
   }
 }
 
